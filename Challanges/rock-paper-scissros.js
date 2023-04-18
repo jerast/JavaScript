@@ -1,9 +1,9 @@
 // if-else anidated method
-var op1 = "Piedra";
-var op2 = "Papel";
-var op3 = "Tijera";
+const op1 = "Piedra";
+const op2 = "Papel";
+const op3 = "Tijera";
 
-var resultado = function (user, cpu) {
+const rps_ifElse = function (user, cpu) {
     if (user != cpu) {
         if (user === op1 && cpu === op3) {
             console.log("el usuario GANO con "+ op1);
@@ -18,13 +18,13 @@ var resultado = function (user, cpu) {
         console.log("Empate");
     }
 };
-resultado(op1,op3);
+rps_ifElse(op1,op3);
 
 // Switch method
-const rps_Switch = (option = Math.floor(Math.random() * 3)) => {
+const rps_switch = (option = Math.floor(Math.random() * 3)) => {
     const options = ['rock', 'paper', 'scissors'];
-    let cpu = options[ Math.floor(Math.random() * 3) ];
-    let user = options[option];
+    const cpu = options[ Math.floor(Math.random() * 3) ];
+    const user = options[option];
 
     console.log(`${user} - ${cpu}`);
 
@@ -47,14 +47,13 @@ const rps_Switch = (option = Math.floor(Math.random() * 3)) => {
             break;
     }
 }
-console.log(rps_Switch());
+console.log(rps_switch());
 
 // Guard Clause method
-const rps_guardClause = (option = Math.floor(Math.random() * 3)) => {
+const rps_guardClause = (option) => {
     const options = ['rock', 'paper', 'scissors'];
-
-    let cpu = options[ Math.floor(Math.random() * 3) ];
-    let user = options[option];
+    const cpu = options[ Math.floor(Math.random() * 3) ];
+    const user = options[ option || Math.floor(Math.random() * 3) ];
 
     console.log(`${user} - ${cpu}`);
 
@@ -67,3 +66,16 @@ const rps_guardClause = (option = Math.floor(Math.random() * 3)) => {
     return "CPU Wins!";
 }
 console.log(rps_guardClause());
+
+// Understand JS Random Generating
+const randomize = (limit = 3) => {
+    const randomNum = Math.random();
+    const multiplier = randomNum * limit;
+    const floorer = Math.floor( multiplier );
+
+    console.log(`Limit: ${ limit }`)
+    console.log(`Random: ${ randomNum }`)
+    console.log(`times: ${ multiplier }`)
+    console.log(`floor: ${ floorer }`)
+}
+randomize();

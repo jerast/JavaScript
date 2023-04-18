@@ -1,8 +1,8 @@
 
 // Method 1
-function shoppingCart(){
+const shoppingCart = () => {
     let cart = [];
-    function addItems(item){
+    const addItems = (item) => {
         cart.push(item);
         console.log(cart);
     }
@@ -15,7 +15,7 @@ amazon("Keyboard");
 amazon(`Display 24"`);
 
 // Method 2
-function shoppingCart2(){
+const shoppingCart2 = () => {
     let cart = []
     return {
         addItems(item){
@@ -31,9 +31,10 @@ function shoppingCart2(){
 }
 
 const amazon2 = shoppingCart2();
-amazon.addItems("Mouse");
-amazon.addItems("Keyboard");
-amazon.addItems(`Display 24"`);
-amazon.getCartItem() // ['Mouse', 'Keyboard', 'Display 24"']
-amazon.removeItem()
-amazon.getCartItem() // ['Mouse', 'Keyboard']
+amazon2.addItems("Mouse");
+amazon2.addItems("Keyboard");
+amazon2.addItems(`Display 24"`);
+amazon2.getCartItem() // ['Mouse', 'Keyboard', 'Display 24"']
+amazon2.removeItem()
+amazon2.getCartItem() // ['Mouse', 'Keyboard']
+console.log( amazon2.getCartItem() )

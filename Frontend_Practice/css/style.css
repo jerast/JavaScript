@@ -17,7 +17,6 @@
   box-sizing: border-box;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 
@@ -86,7 +85,6 @@ body {
 }
 
 .menu-desktop {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   height: auto;

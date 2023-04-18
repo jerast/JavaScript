@@ -1,4 +1,4 @@
-let string = "This is a string";
+const string = "This is a string";
 
 // method 1
 const reverse_for = string => {
@@ -13,7 +13,7 @@ reverse_for(string);
 
 // method 2
 const reverse_split = string => {
-    let reversed = string.split("").reverse().join("");
+    const reversed = string.split("").reverse().join("");
     console.log(reversed);
 };
 reverse_split(string);
