@@ -105,7 +105,7 @@ let queries4 = [
 	["GET","user1","city"],
 	["GET","lastName","user1"]
 ];
-// console.log( solution(queries4) );
+console.log( solution(queries4) );
 
 let queries5 = [
 	["SET","A","BC","D"],
@@ -210,3 +210,18 @@ let queries10 = [
 ];
 // console.log( solution(queries10) );
 
+
+// [ 
+// 	'user1', 
+// 	[ 'firstName', 'Greg' ],
+// 	[ 'lastName', 'Wright' ],
+// 	[ 
+// 		 'city', 
+// 		 [ 'name', 'London' ],
+// 		 [ 'UTC', '+01' ]
+// 	]
+// ],
+// [   
+// 	'lastName', 
+// 	[ 'user1', 'error' ]
+// ]
